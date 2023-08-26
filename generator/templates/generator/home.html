@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator home page</title>
+</head>
+<body>
+<h1>Password Generator</h1>
+{#action looks for views password#}
+{#reference a url, comes from name="" in urls.py#}
+<form action="{% url 'password' %}">
+    <label for="length" >Length</label>
+        <select name="length" id="length">
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+    <br>
+    <label for="uppercase">Upper Case</label>
+    <input type="checkbox" id="uppercase" name="uppercase">
+    <br>
+{#    labels for="" references the id="" #}
+    <label for="numbers">Numbers</label>
+    <input type="checkbox" id="numbers" name="numbers">
+    <br>
+    <label for="specialchars">Special Characters</label>
+    <input type="checkbox" id="specialchars" name="specialchars">
+    <br>
+    <input type="submit" value="Generate Password">
+</form>
+</body>
+</html>
