@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <title>Generator home page</title>
 </head>
-{# password is like an id. from the views page it is the key: anf the value is rendered#}
-<h1>Your Password: {{ password }}</h1>
-<a href="{% url 'home' %}">Home Page</a>
-<a href="{% url 'about' %}">About</a>
+<h1>This is an about page</h1>
+<br>
+<p>some text</p>
+<a href="{% url 'home' %}">Home</a>

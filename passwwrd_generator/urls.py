@@ -19,8 +19,9 @@ from django.urls import path
 from generator import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', views.home, name='home'),
     # name is to reference url, see action in home.html
     path('password/', views.password, name='password'),
-    path('work', views.work),
+    path('work/', views.work),
+    path('about/', views.about, name='about'),
 ]
